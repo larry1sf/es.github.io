@@ -1,0 +1,358 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100&family=Montserrat+Alternates:wght@500&family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@800&display=swap');
+
+/* icono carrito */
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+
+/* hombre y mujer & porcentaje*/
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+/* wp */
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
+/* magnifigalss = lupa */
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css');
+
+/* iconos bar-img */
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul li {
+    list-style: none;
+    font-family: "Montserrat Alternates";
+}
+
+ul li ul {
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+.padre {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between
+}
+
+.logo img {
+    width: 150px;
+    cursor: pointer;
+    object-position: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav {
+    font-size: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    text-wrap: balance;
+}
+
+.nav a {
+    padding: 8px;
+    padding-bottom: 0;
+    border: 1px solid transparent;
+}
+
+.nav li:nth-child(5) {
+    text-wrap: nowrap;
+}
+
+.nav>li:first-child>a {
+    background: linear-gradient(rgb(221, 214, 254), rgb(217, 70, 239), rgb(109, 40, 217));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.nav>li:first-child>a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(rgb(221, 214, 254), rgb(217, 70, 239), rgb(109, 40, 217));
+    position: absolute;
+    bottom: 0;
+}
+
+
+.nav>li>a:hover {
+    background: radial-gradient(at right top, rgb(221, 214, 254), rgb(217, 70, 239), rgb(109, 40, 217));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-radius: 15px;
+    transition: color .5s linear 0s;
+    position: relative;
+}
+
+.nav>li>a::after {
+    background-color: linear-gradient(rgb(221, 214, 254), rgb(217, 70, 239), rgb(109, 40, 217));
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+}
+
+.nav>li>a:hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(rgb(221, 214, 254), rgb(217, 70, 239), rgb(109, 40, 217));
+    position: absolute;
+    bottom: 0;
+    transition: width .7s cubic-bezier(0.63, 0.53, 0.15, 1.3) 0s;
+
+}
+
+
+.carro {
+
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+}
+
+.carro ul {
+    width: 150px;
+    display: flex;
+}
+
+.carro li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    width: 100%;
+    text-align: center;
+}
+
+.carro i:hover {
+    font-size: 40px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.conta-carro {
+    position: relative;
+}
+
+.conta-carro::after {
+    content: "0";
+    font-size: 9px;
+    font-weight: bolder;
+    position: absolute;
+    right: 1px;
+    display: inline-block;
+    color: aliceblue;
+    background-color: #f00;
+    width: 10px;
+    height: auto;
+    border-radius: 100%;
+    text-align: center;
+}
+
+
+.c {
+    /* display: none; */
+}
+
+header {
+    position: relative;
+}
+
+header input:checked~.c {
+    /* position: relative; */
+    display: inline-block;
+    /* width: 10vw; */
+    /* height: 35rem; */
+    /* right: 0; */
+    background: #f00;
+    /* z-index: 100; */
+}
+
+
+
+
+
+.img-b {
+    position: relative;
+    /* height: 100%; */
+}
+
+.img-b img {
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-bar {
+    z-index: 0;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.img-bar label {
+    width: 36px;
+    padding: 0px 20px;
+    height: 36px;
+    display: grid;
+    place-content: center;
+}
+
+.img-bar i {
+    display: block;
+    font-size: 35px;
+}
+
+.img-bar>label:hover {
+    height: 10px;
+    /* background-color: #a8a8a8; */
+    border-radius: 5px;
+}
+
+.img-bar>label:hover i {
+    cursor: pointer;
+    transition: font-size .2s cubic-bezier(0.51, 0.04, 0.01, 0.15)0s;
+    font-size: 40px;
+
+}
+
+.img-bar i {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgb(221, 214, 254), rgb(217, 70, 239), rgb(109, 40, 217));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.conte {
+    align-self: self-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    background: linear-gradient(to bottom, rgb(233, 213, 255), rgb(192, 132, 252), rgb(107, 33, 168));
+    border-radius: 15px;
+    height: 165px;
+    width: 100%;
+}
+
+.conte div {
+    text-align: center;
+    display: flex;
+    text-wrap: pretty;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(243, 244, 246), rgb(209, 213, 219));
+    height: 90%;
+    width: 96.5%;
+    min-height: 0;
+    border-radius: 10px;
+    font-family: 'Ubuntu Condensed';
+}
+
+.conte strong {
+    font-size: 35px;
+}
+
+.conte p:nth-child(2) {
+    padding: 3px;
+    align-self: self-start;
+    margin-left: 10px;
+    font-size: 25px;
+    word-spacing: 10px;
+}
+
+.conte button {
+    font-size: 20px;
+    background-color: transparent;
+    border: 0 solid transparent;
+    /* padding: 10px; */
+    border: 1px solid violet;
+    border-radius: 9px;
+    width: 100%;
+    height: 35px;
+
+}
+
+.conte button:hover {
+    /* background: linear-gradient(to right, rgb(233, 213, 255), rgb(192, 132, 252), rgb(107, 33, 168)); */
+    transform-origin: left;
+    background-color: #B15EFF;
+    transition: all .3s cubic-bezier(0.6, 0.92, 0.42, 0.37) 0s;
+    color: #fff;
+}
+
+.img-bar .n {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-content: end;
+    height: 90%;
+}
+
+.expandir {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    gap: 0 10px;
+}
+
+.expandir div {
+    display: block;
+    background-color: #000;
+    border: 2px solid #Fff;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.img-b {
+    height: 83vh;
+    /* width: 100vw; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../imgs/header-tienda.jpg);
+}
