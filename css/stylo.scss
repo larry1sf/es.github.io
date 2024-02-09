@@ -1,15 +1,7 @@
 // componentes
-@use 'importaciones/componentes' ;
-
-
+@use "importaciones/componentes" as comp;
 // mixins
-@use 'importaciones/mixin' ;
-
+@use "importaciones/mixin";
 
 // estilos
-@use 'importaciones/estilos' ;
-
-
-
-
-
+@use "importaciones/estilos";

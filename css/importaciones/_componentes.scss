@@ -1,59 +1,364 @@
+@use "sass:color";
+@use "mixin" as mx;
 $color_text: #333333;
-$color_menu:linear-gradient(-135deg, #f4ebf8 0%, #e1d4e7 100%);
+$color_menu: linear-gradient(-135deg, #f4ebf8 0%, #e1d4e7 100%);
+$fondo__menu_blanco: rgba(238, 237, 237, 0.801);
+$fondo: linear-gradient(
+	to bottom,
+	#d5d4d0 1%,
+	#eeeeec 31%,
+	#efeeec 75%,
+	#e9e9e7 100%
+);
+// promociones
+.pa {
+	.promocion {
+		display: flex;
+		background-color: rgb(35, 179, 236);
+		cursor: pointer;
+		height: 30px;
+		width: 100%;
+		@include mx.centrar();
 
-@use 'mixin' as mx;
+		p {
+			font-family: "btn";
+		}
+		&:hover {
+			background: #56aed6;
+		}
+	}
+}
+
+.bar-menu {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	// gap: 6%;
+	padding: 20px 0;
+	height: 50px;
+	font-size: 20px;
+	background-image: $fondo;
+	.nav {
+		display: flex;
+		width: 700px;
+		gap: 50px;
+		justify-content: space-around;
+		align-items: center;
+
+		i {
+			font-size: 15px;
+			&::before {
+				position: relative;
+				bottom: 0;
+				left: 5px;
+			}
+		}
+		li {
+			border-radius: 5px;
+			&:nth-child(3) {
+				.mas {
+					display: block;
+					// width: 130px;
+					position: relative;
+					&::before {
+						content: "";
+						display: block;
+						width: 10px;
+						height: 10px;
+						border-bottom: 2px solid #000;
+						border-left: 2px solid #000;
+						border-radius: 1.2px;
+						position: absolute;
+						top: 0px;
+						right: -20px;
+						transform: rotate(-45deg);
+					}
+				}
+				&:hover {
+					ul {
+						display: flex;
+						flex-direction: column;
+						position: absolute;
+						width: 165px;
+						background-image: linear-gradient(
+							#eeeeec 11%,
+							#efeeec 45%,
+							#e9e9e7 60%
+						);
+						li {
+							padding: 5px 0;
+							width: 100%;
+							a {
+								display: flex;
+								@include mx.centrar();
+							}
+							&:hover {
+								background: #56aed6;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//  opciness de  nav.0
+
+.opciones {
+	display: flex;
+	width: 300px;
+	height: 20px;
+	justify-content: space-evenly;
+	#carro {
+		+ #C-carro {
+			display: inline-block;
+			width: 1px;
+			height: 100vh;
+
+			transition: all 0.2s cubic-bezier(0.94, 0.47, 0.93, 0.47);
+			.nav-carro {
+				i {
+					&:hover {
+						cursor: pointer;
+					}
+					&:first-child {
+						display: none;
+					}
+					label {
+						position: relative;
+						right: -120px;
+						font-size: 18px;
+					}
+				}
+				label {
+					position: relative;
+					right: -120px;
+					font-size: 18px;
+				}
+				p {
+					display: none;
+				}
+				.img-logo {
+					display: none;
+
+					img {
+						height: 100%;
+						width: 100%;
+						object-fit: contain;
+					}
+				}
+			}
+			.info-carro {
+				display: none;
+			}
+		}
+		&:checked {
+			+ #C-carro {
+				padding: 0px 10px;
+				width: 100%;
+				height: 100vh;
+				background: $fondo__menu_blanco;
+				transition: all 0.4s;
+				.nav-carro {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					i {
+						&:first-child {
+							display: inline-block;
+						}
+						&:last-child {
+							display: none;
+						}
+					}
+					label {
+						left: 0;
+					}
+					p {
+						display: block;
+					}
+					.img-logo {
+						display: block;
+						width: 100px;
+						height: 40px;
+					}
+				}
+				.info-carro {
+					display: block;
+					padding: 10px 0;
+
+					br {
+						display: block;
+						height: 1px;
+						width: 10px;
+					}
+					p {
+						color: #424769;
+						font-size: 18px;
+					}
+					.selecionados-carro {
+						text-align: center;
+						padding: 30px;
+					}
+					.botones {
+						text-align: center;
+						button {
+							font-weight: bolder;
+							padding: 10px;
+							background-color: #bebbc7;
+							border: 1px solid #000;
+							border-radius: 50px;
+							&:hover {
+								background-color: hsla(0, 0%, 0%, 0.7);
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// la parte de las fotos y sus nentes interiores.
+// .fotos {
+// 	width: 100%;
+
+// 	div {
+// 		background: url(../imgs/back-header.jpg);
+// 		object-fit: contain;
+// 		object-position: center;
+// 		height: 90vh;
+// 		display: grid;
+// 		grid-template-columns: repeat(5, 1fr);
+// 		grid-template-rows: repeat(4, 1fr);
+
+// 		div {
+// 			grid-area: 3/3;
+// 			opacity: 0.8;
+// 			display: flex;
+// 			@include mx.centrar();
+// 			background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+// 			border-radius: 10px;
+// 			width: 20rem;
+// 			height: 20rem;
+
+// 			div {
+// 				position: relative;
+// 				display: flex;
+// 				flex-direction: column;
+// 				gap: 10px;
+// 				width: 98%;
+// 				height: 96.5%;
+// 				background-image: $color_menu;
+// 				padding: 10px 0;
+
+// 				h1 {
+// 					font-family: "conte";
+// 					line-height: 20px;
+// 					padding-top: 15px;
+// 				}
+
+// 				p {
+// 					font-weight: 600;
+
+// 					&:nth-child(2) {
+// 						font-family: "numeros";
+// 						line-height: 29px;
+// 					}
+
+// 					&:nth-child(3) {
+// 						line-height: 25px;
+// 						font-family: "txt";
+// 						font-size: 28px;
+// 						width: 80%;
+// 						text-align: center;
+// 						text-wrap: pretty;
+// 					}
+// 				}
+
+// 				div {
+// 					position: relative;
+// 					display: flex;
+// 					flex-direction: row;
+// 					background: transparent;
+// 					padding: 0;
+// 					align-items: center;
+// 					justify-content: space-around;
+
+// 					button {
+// 						width: 100%;
+// 						height: 35px;
+// 						border-radius: 20px;
+// 						cursor: pointer;
+// 						color: #dad4ec;
+// 						border: 0px solid transparent;
+// 						font-family: "conte";
+// 						letter-spacing: 1.5px;
+// 						font-size: 20px;
+// 						background: #424769;
+// 						transition: all 0.5s, background 0.3s;
+
+// 						&:hover {
+// 							background: $color_text;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
 // puntos para cambiar de imagen de fondo
-.s_punto{
-    width: 50px;
-    
-    .punto{
-    @include mx.btn_punto();
-        
-        transform: rotate(0.12turn);
-    
-        &:hover{
-            @include mx.btn_punto(15px);
-        }
-    }
-    .punto-1{
-        @include mx.btn_punto();
-        transform: rotate(0.62turn);
-        &:hover{
-            @include mx.btn_punto(15px);
-        }
-    }
+.s_punto {
+	width: 50px;
+
+	.punto {
+		@include mx.btn_punto();
+
+		transform: rotate(0.12turn);
+
+		&:hover {
+			@include mx.btn_punto(15px);
+		}
+	}
+	.punto-1 {
+		@include mx.btn_punto();
+		transform: rotate(0.62turn);
+		&:hover {
+			@include mx.btn_punto(15px);
+		}
+	}
 }
 // contenedor de la bandeja de productos
 
-    .con{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
-    gap: 20px;
-    border: 3px solid $color_text;
-        .element{
-            display: flex;
-            flex-direction: column;
-            @include mx.centrar();
-            background-color: $color_menu;
-            .w_img{
-                width: auto;
-                img{
-                    object-fit: contain;
-                    width: 100%;
-
-                }
-            } 
-        }
-   } 
-
-
+.con {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 20px;
+	border: 3px solid $color_text;
+	.element {
+		display: flex;
+		flex-direction: column;
+		@include mx.centrar();
+		background-color: $color_menu;
+		.w_img {
+			width: auto;
+			img {
+				object-fit: contain;
+				width: 100%;
+			}
+		}
+	}
+}
 
 // componente de la caja de busqueda o filtro
-.ropa{
-    background:#F8F4EC;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
+.ropa {
+	background: #f8f4ec;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
 }

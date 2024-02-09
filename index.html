@@ -1,110 +1,166 @@
 <!DOCTYPE html>
-<html lang="es" >
-<head>
-<!-- css -->
-<link rel="stylesheet" href="./css/stilo.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Moncada Models</title>
-</head>
-<body>
-    <header>
-        <div class="pa">
-            <div class="promocion">
-                <p>Area de Promociones</p>
-            </div>
+<html lang="es">
+	<head>
+		<!-- css -->
+		<link rel="stylesheet" href="./css/stilo.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <nav class="bar-menu">
-                <strong class="logo">
+		<title>Moncada Models</title>
+	</head>
+	<body>
+		<header>
+			<div class="pa">
+				<div class="promocion">
+					<p>Area de Promociones</p>
+				</div>
+
+				<nav class="bar-menu">
+					<!-- <strong class="logo">
                     <img src="./imgs/1.png" alt="Moncada Models">
-                </strong>
+                </strong> -->
 
-                <ul class="nav">
-                    <li><a href="#">Inicio <i class="fi fi-tr-house-chimney-blank"></i></a></li>
-                    <li ><a href="#">Nuestras Ofertas <i class="fi fi-br-percentage"></i></a></li>
-                    <li class="divas"><a href="#">Divas <i class=" fi fi-br-woman-head"></i></a></li>
-                    <li class="wapos"><a href="#">Wapos <i class=" fi fi-br-man-head"></i></a></li>
-                    <li><a href="#">Contactanos <i class="fi fi-brands-whatsapp"></i></a></li>
-                </ul>
-                
-                <div class="opciones">
-                    <div>
-                        <i class="fi fi-tr-basket-shopping-simple"></i>
-                    </div>
-                </div>
-            </nav>
+					<ul class="nav">
+						<li>
+							<a href="#"
+								>Inicio
+								<i class="fi fi-tr-house-chimney-blank"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								>Nuestras Ofertas
+								<i class="fi fi-br-percentage"></i
+							></a>
+						</li>
+						<li>
+							<a href="#" class="mas">Ropa por categorias</a>
+							<ul>
+								<li class="divas">
+									<a href="#"
+										>Divas
+										<i class="fi fi-br-woman-head"></i
+									></a>
+								</li>
+								<li class="wapos">
+									<a href="#"
+										>Wapos <i class="fi fi-br-man-head"></i
+									></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"
+								>Contactanos
+								<i class="fi fi-brands-whatsapp"></i
+							></a>
+						</li>
+					</ul>
 
-            
-        </div>
-    </header>
-    <main>
-        <article>
-            <section class="fotos">
-                <div>
-                   <!-- <img src="./imgs/header-tienda.jpg" alt="Ropa">  -->
-                
-                   <div class="texto-compra">
-                        <div>
-                            <h1>proucto</h1>
-                            <p> $14.000</p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, explicabo.
-                            </p>
-                            <div>
-                                
-                                <div class="s_punto">
-                                    <div class="punto"></div>
-                                </div>
+					<div class="opciones">
+						<input type="checkbox" id="carro" />
+						<div id="C-carro">
+							<div class="nav-carro">
+								<picture class="img-logo">
+									<img src="./imgs/1.png" alt="" />
+								</picture>
+								<p>Carro</p>
+								<label for="carro">
+									<i class="fi fi-rr-apps-delete"></i>
+									<i
+										class="fi fi-tr-basket-shopping-simple"
+									></i>
+								</label>
+							</div>
+							<div class="info-carro">
+								<p>0 items elecionados</p>
 
-                                <button type="button" >Comprar</button>
-                                
-                                <div class="s_punto">
-                                    <div class="punto-1"></div>
-                                </div>
-                            </div>
-                        </div>
-                   </div>
-                </div>
-            </section>
-            <section class="ropa">
+								<div class="selecionados-carro">
+									<p>total de seleccionado para la compra</p>
+								</div>
 
-              <div class="product">
+								<div class="botones">
+									<button type="button">Comprar ahora</button>
+									<button type="button">
+										Seguir comprando
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<article>
+				<section class="fotos">
+					<div>
+						<!-- <img src="./imgs/header-tienda.jpg" alt="Ropa">  -->
 
-                    <div class="img_card">
-                        <img src="./imgs/vestido.jpg" alt="">
-                    </div>
-                    <div class="card">
-                        <p>www.MoncadaModels.co</p>
-                        <h3>Vestido de dama</h3>
-                        <t>$50.000</t>
-                        <blockquote>El <a href="">Precio del envio</a> se estima en la pantalla de pago
-                        </blockquote>
-                        <p>Cantidad</p>
-                        <div class="contador">
-                            <div class="menos">
-                                <div></div>
-                            </div>
-                            <div>0</div>
-                            <div class="mas">
-                                <div></div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div><button type="button">Agregar al carrito</button></div>
-                            <div><button type="button">Comprar ahora</button></div>
-                        </div>
-                        <div>
-                            <p>compartir</p>
-                            <p>Ver todos los detalles</p>
-                        </div>
+						<div class="texto-compra">
+							<div>
+								<h1>proucto</h1>
+								<p>$14.000</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Illum, explicabo.
+								</p>
+								<div>
+									<div class="s_punto">
+										<div class="punto"></div>
+									</div>
 
+									<button type="button">Comprar</button>
 
-                    </div>
-
-              </div>
-<!-- 
+									<div class="s_punto">
+										<div class="punto-1"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="ropa">
+					<div class="product">
+						<div class="img_card">
+							<img src="./imgs/vestido.jpg" alt="" />
+						</div>
+						<div class="card">
+							<p>www.MoncadaModels.co</p>
+							<h3>Vestido de dama</h3>
+							<t>$50.000</t>
+							<blockquote>
+								El <a href="">Precio del envio</a> se estima en
+								la pantalla de pago
+							</blockquote>
+							<p>Cantidad</p>
+							<div class="contador">
+								<div class="menos">
+									<div></div>
+								</div>
+								<div>0</div>
+								<div class="mas">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div>
+								<div>
+									<button type="button">
+										Agregar al carrito
+									</button>
+								</div>
+								<div>
+									<button type="button">Comprar ahora</button>
+								</div>
+							</div>
+							<div>
+								<p>compartir</p>
+								<p>Ver todos los detalles</p>
+							</div>
+						</div>
+					</div>
+					<!-- 
                     <div class="bandeja_productos">
                         <div class="con">     
                         
@@ -141,16 +197,17 @@
                         
                         
                     </div> -->
-                </article>
-            </section>
-        </article>
-    </main>
-        
-        
-    
+					<!-- </article> -->
+				</section>
+			</article>
+		</main>
 
-
-<!-- fontawesome -->
-<script src="https://kit.fontawesome.com/baaf45acd3.js" crossorigin="anonymous"></script>
-</body>
+		<!-- mi js -->
+		<!-- <script src="./js/index.js"></script> -->
+		<!-- fontawesome -->
+		<script
+			src="https://kit.fontawesome.com/baaf45acd3.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>

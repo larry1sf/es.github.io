@@ -1,0 +1,173 @@
+@use "mixin" as mx;
+@use "componentes" as comp;
+// componentes
+
+// iconos
+/* font googles */
+// @import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100&family=Montserrat+Alternates:wght@500&family=Ubuntu+Condensed&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@800&display=swap");
+
+/* icono carrito */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css");
+
+/* hombre y mujer & porcentaje*/
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css");
+
+/* wp */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css");
+/* magnifigalss = 
+// flecha abajo */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+/* iconos bar-img */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+// icono cerrar
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-straight/css/uicons-bold-straight.css");
+
+@font-face {
+	font-family: "btn";
+	src: url(../font/Milk\ Mango.ttf);
+}
+@font-face {
+	font-family: "conte";
+	src: url(../font/Brampton\ Serif\ Demo.otf);
+}
+@font-face {
+	font-family: "txt";
+	src: url(../font/Landsdowne.ttf);
+}
+@font-face {
+	font-family: "numeros";
+	src: url(../font/numeros.ttf);
+}
+
+// defaults
+*,
+body {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+input {
+	display: none;
+	// opacity: 1;
+}
+ul li {
+	list-style: none;
+	font-family: "conte";
+}
+
+ul li ul {
+	display: none;
+}
+
+.fotos {
+	width: 100%;
+	div {
+		background: url(../imgs/back-header.jpg);
+		object-fit: contain;
+		object-position: center;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+
+		div {
+			grid-area: 3/3;
+			opacity: 0.8;
+			display: flex;
+			@include mx.centrar();
+			background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+			border-radius: 20px;
+			width: 25rem;
+			height: 15rem;
+			div {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				width: 98%;
+				height: 96.5%;
+				background-image: comp.$color_menu;
+				padding: 10px 0;
+
+				h1 {
+					font-family: "conte";
+					line-height: 20px;
+					padding-top: 15px;
+				}
+				p {
+					font-weight: 600;
+					&:nth-child(2) {
+						font-family: "numeros";
+						line-height: 29px;
+					}
+					&:nth-child(3) {
+						line-height: 25px;
+						font-family: "txt";
+						font-size: 28px;
+						width: 80%;
+						text-align: center;
+						text-wrap: pretty;
+					}
+				}
+				div {
+					position: relative;
+					display: flex;
+					flex-direction: row;
+					background: transparent;
+					padding: 0;
+					align-items: center;
+					justify-content: space-around;
+					button {
+						width: 100%;
+						height: 35px;
+						border-radius: 20px;
+						cursor: pointer;
+						color: #dad4ec;
+						border: 0px solid transparent;
+						font-family: "conte";
+						letter-spacing: 1.5px;
+						font-size: 20px;
+						background: #424769;
+						transition: all 0.5s, background 0.3s;
+
+						&:hover {
+							background: comp.$color_text;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.product {
+	background-color: #dad4ec;
+	width: 80%;
+	height: 90%;
+	display: flex;
+
+	.img_card {
+		width: 500px;
+		height: 100%;
+		padding: 20px;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.card {
+	p {
+		color: comp.$color_text;
+		font-family: "numeros";
+	}
+}
