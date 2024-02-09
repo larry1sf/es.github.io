@@ -1,0 +1,338 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100&family=Montserrat+Alternates:wght@500&family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@800&display=swap");
+/* icono carrito */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css");
+/* hombre y mujer & porcentaje*/
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css");
+/* wp */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css");
+/* magnifigalss = lupa */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css");
+/* iconos bar-img */
+@import url("https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+.s_punto {
+  width: 50px;
+}
+.s_punto .punto {
+  width: 10px !important;
+  height: 10px !important;
+  display: block;
+  border-radius: 0 !important;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  cursor: pointer;
+  transform: rotate(0.12turn);
+}
+.s_punto .punto:hover {
+  width: 15px !important;
+  height: 15px !important;
+  display: block;
+  border-radius: 0 !important;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  cursor: pointer;
+}
+.s_punto .punto-1 {
+  width: 10px !important;
+  height: 10px !important;
+  display: block;
+  border-radius: 0 !important;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  cursor: pointer;
+  transform: rotate(0.62turn);
+}
+.s_punto .punto-1:hover {
+  width: 15px !important;
+  height: 15px !important;
+  display: block;
+  border-radius: 0 !important;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  cursor: pointer;
+}
+
+.con {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  border: 3px solid #333333;
+}
+.con .element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: linear-gradient(-135deg, #f4ebf8 0%, #e1d4e7 100%);
+}
+.con .element .w_img {
+  width: auto;
+}
+.con .element .w_img img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.ropa {
+  background: #F8F4EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "btn";
+  src: url(../font/Milk\ Mango.ttf);
+}
+@font-face {
+  font-family: "conte";
+  src: url(../font/Brampton\ Serif\ Demo.otf);
+}
+@font-face {
+  font-family: "txt";
+  src: url(../font/Landsdowne.ttf);
+}
+@font-face {
+  font-family: "numeros";
+  src: url(../font/numeros.ttf);
+}
+*,
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul li {
+  list-style: none;
+  font-family: "conte";
+}
+
+ul li ul {
+  display: none;
+}
+
+.promocion {
+  display: flex;
+  background-color: rgb(35, 179, 236);
+  height: 5vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.promocion p {
+  font-family: "btn";
+}
+.promocion:hover {
+  background: #8baaaa;
+}
+
+.bar-menu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  font-size: 15px;
+  background-image: linear-gradient(-135deg, #f4ebf8 0%, #e1d4e7 100%);
+  height: 10vh;
+}
+
+.logo {
+  order: 1;
+  width: 100px;
+  height: 100px;
+  transform: scale(1.9, 1.56);
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
+.logo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.nav {
+  order: 2;
+  display: flex;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  gap: 20px;
+}
+.nav li {
+  padding-bottom: 4px;
+}
+.nav li:nth-child(1) {
+  text-decoration: underline #333333;
+}
+.nav li:nth-child(1) a:hover::after {
+  width: 0;
+  height: 0;
+}
+.nav li:nth-child(1) a:hover::before {
+  width: 0;
+  height: 0;
+}
+.nav a {
+  position: relative;
+  color: #333333;
+}
+.nav a::after {
+  content: "";
+  right: 50%;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 0;
+  transition: width 0.5s cubic-bezier(0.14, 0.34, 0.19, 1.52);
+}
+.nav a:hover::after {
+  content: "";
+  width: 50%;
+  height: 1px;
+  border-radius: 20px;
+  background-color: #333;
+}
+.nav a::before {
+  content: "";
+  left: 50%;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 0;
+  transition: width 0.5s cubic-bezier(0.14, 0.34, 0.19, 1.52);
+}
+.nav a:hover::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  border-radius: 20px;
+  background-color: #333;
+}
+
+.opciones {
+  order: 3;
+}
+.opciones div {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.57, -0.01, 0.73, 1);
+}
+.opciones:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fotos {
+  width: 100%;
+}
+.fotos div {
+  background: url(../imgs/back-header.jpg);
+  object-fit: contain;
+  object-position: center;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.fotos div div {
+  grid-area: 3/3;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+.fotos div div div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 98%;
+  height: 96.5%;
+  background-image: linear-gradient(-135deg, #f4ebf8 0%, #e1d4e7 100%);
+  padding: 10px 0;
+}
+.fotos div div div h1 {
+  font-family: "conte";
+  line-height: 20px;
+  padding-top: 15px;
+}
+.fotos div div div p {
+  font-weight: 600;
+}
+.fotos div div div p:nth-child(2) {
+  font-family: "numeros";
+  line-height: 29px;
+}
+.fotos div div div p:nth-child(3) {
+  line-height: 25px;
+  font-family: "txt";
+  font-size: 28px;
+  width: 80%;
+  text-align: center;
+  text-wrap: pretty;
+}
+.fotos div div div div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  padding: 0;
+  align-items: center;
+  justify-content: space-around;
+}
+.fotos div div div div button {
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #dad4ec;
+  border: 0px solid transparent;
+  font-family: "conte";
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  background: #424769;
+  transition: all 0.5s, background 0.3s;
+}
+.fotos div div div div button:hover {
+  background: #333333;
+}
+
+.product {
+  background-color: #dad4ec;
+  width: 80%;
+  height: 90%;
+  display: flex;
+}
+.product .img_card {
+  width: 500px;
+  height: 100%;
+  padding: 20px;
+}
+.product .img_card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card p {
+  color: #333333;
+  font-family: "numeros";
+}
+
+/*# sourceMappingURL=stilo.css.map */

@@ -2,7 +2,7 @@
 <html lang="es" >
 <head>
 <!-- css -->
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/stilo.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -10,15 +10,16 @@
 </head>
 <body>
     <header>
-        <div class="padre">
+        <div class="pa">
+            <div class="promocion">
+                <p>Area de Promociones</p>
+            </div>
 
+            <nav class="bar-menu">
+                <strong class="logo">
+                    <img src="./imgs/1.png" alt="Moncada Models">
+                </strong>
 
-            <strong class="logo">
-                <img src="./imgs/logo - copia.png" alt="Moncada Models">
-            </strong>
-
-
-            <nav>
                 <ul class="nav">
                     <li><a href="#">Inicio <i class="fi fi-tr-house-chimney-blank"></i></a></li>
                     <li ><a href="#">Nuestras Ofertas <i class="fi fi-br-percentage"></i></a></li>
@@ -26,63 +27,124 @@
                     <li class="wapos"><a href="#">Wapos <i class=" fi fi-br-man-head"></i></a></li>
                     <li><a href="#">Contactanos <i class="fi fi-brands-whatsapp"></i></a></li>
                 </ul>
+                
+                <div class="opciones">
+                    <div>
+                        <i class="fi fi-tr-basket-shopping-simple"></i>
+                    </div>
+                </div>
             </nav>
 
-            <div class="carro">
-                <ul>
-                    <li>
-                        <a href="#"><i class="fi fi-rs-search"></i></a>
-                    </li>
-                    <li>
-                        <a href="#" class="conta-carro">
-                            <label for="carrito">
-                                <i class="fi fi-tr-basket-shopping-simple"></i>
-                            </label>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <input type="checkbox" name="" id="carrito">
-            <div class="c">
-                <div class="conte-x">
-                    <div class="x"></div>
-                    <div class="x"></div>
-                </div>
-            </div>
-        </div>
-            <!-- #buscar como poner el espacio del carrito para poder abriro y cerrarlo con un vh de 100 -->
-    </header>
-        <!-- <div class="tablero">
             
-            <div class="img-b">
-                <div class="img-bar">
-                <input type="checkbox" name="" id="retroceder">
-                <label for="retroceder">
-                    <i class="fi fi-rr-angle-circle-left"></i>
-                </label>
-                <div class="n">
-                    <div class="conte">
-                        <div>
-                            <strong><p>producto</p></strong>
-                            <p>Precio: $0</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, similique.</p>
-                            <button type="button">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="expandir">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <input type="checkbox" name="" id="adelantar">
-                <label for="adelantar">
-                    <i class="fi fi-rr-angle-circle-right"></i>
-                </label>
-            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <section class="fotos">
+                <div>
+                   <!-- <img src="./imgs/header-tienda.jpg" alt="Ropa">  -->
                 
-            </div>
-        </div>  -->
+                   <div class="texto-compra">
+                        <div>
+                            <h1>proucto</h1>
+                            <p> $14.000</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, explicabo.
+                            </p>
+                            <div>
+                                
+                                <div class="s_punto">
+                                    <div class="punto"></div>
+                                </div>
+
+                                <button type="button" >Comprar</button>
+                                
+                                <div class="s_punto">
+                                    <div class="punto-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </section>
+            <section class="ropa">
+
+              <div class="product">
+
+                    <div class="img_card">
+                        <img src="./imgs/vestido.jpg" alt="">
+                    </div>
+                    <div class="card">
+                        <p>www.MoncadaModels.co</p>
+                        <h3>Vestido de dama</h3>
+                        <t>$50.000</t>
+                        <blockquote>El <a href="">Precio del envio</a> se estima en la pantalla de pago
+                        </blockquote>
+                        <p>Cantidad</p>
+                        <div class="contador">
+                            <div class="menos">
+                                <div></div>
+                            </div>
+                            <div>0</div>
+                            <div class="mas">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div><button type="button">Agregar al carrito</button></div>
+                            <div><button type="button">Comprar ahora</button></div>
+                        </div>
+                        <div>
+                            <p>compartir</p>
+                            <p>Ver todos los detalles</p>
+                        </div>
+
+
+                    </div>
+
+              </div>
+<!-- 
+                    <div class="bandeja_productos">
+                        <div class="con">     
+                        
+                            <div class="element">   
+                                <div class="w_img">
+                                    <img src="./imgs/back-header.jpg" alt="">
+                                </div>
+                                <h3>$24.000</h3>
+                                <p>nombre</p>
+                            </div>
+                            <div class="element">   
+                                <div class="w_img">
+                                    <img src="./imgs/back-header.jpg" alt="">
+                                </div>
+                                <h3>$24.000</h3>
+                                <p>nombre</p>
+                            </div>
+                            <div class="element">   
+                                <div class="w_img">
+                                    <img src="./imgs/back-header.jpg" alt="">
+                                </div>
+                                <h3>$24.000</h3>
+                                <p>nombre</p>
+                            </div>
+                            <div class="element">   
+                                <div class="w_img">
+                                    <img src="./imgs/back-header.jpg" alt="">
+                                </div>
+                                <h3>$24.000</h3>
+                                <p>nombre</p>
+                            </div>
+                    </div>
+                    
+                        
+                        
+                    </div> -->
+                </article>
+            </section>
+        </article>
+    </main>
         
         
     

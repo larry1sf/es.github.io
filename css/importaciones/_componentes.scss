@@ -1,0 +1,59 @@
+$color_text: #333333;
+$color_menu:linear-gradient(-135deg, #f4ebf8 0%, #e1d4e7 100%);
+
+@use 'mixin' as mx;
+// puntos para cambiar de imagen de fondo
+.s_punto{
+    width: 50px;
+    
+    .punto{
+    @include mx.btn_punto();
+        
+        transform: rotate(0.12turn);
+    
+        &:hover{
+            @include mx.btn_punto(15px);
+        }
+    }
+    .punto-1{
+        @include mx.btn_punto();
+        transform: rotate(0.62turn);
+        &:hover{
+            @include mx.btn_punto(15px);
+        }
+    }
+}
+// contenedor de la bandeja de productos
+
+    .con{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    gap: 20px;
+    border: 3px solid $color_text;
+        .element{
+            display: flex;
+            flex-direction: column;
+            @include mx.centrar();
+            background-color: $color_menu;
+            .w_img{
+                width: auto;
+                img{
+                    object-fit: contain;
+                    width: 100%;
+
+                }
+            } 
+        }
+   } 
+
+
+
+// componente de la caja de busqueda o filtro
+.ropa{
+    background:#F8F4EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}

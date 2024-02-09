@@ -1,0 +1,38 @@
+
+// mixins para centrar
+
+@mixin centrar () {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// mixins de barra de navegacion u animaciones
+@mixin bar_ps(){
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 0;
+    transition: width .5s cubic-bezier(0.14, 0.34, 0.19, 1.52);
+}
+@mixin bar_hover_ps($color:#333){
+    width: 50%;
+    height: 1px;
+    border-radius: 20px;
+    background-color:$color;
+}
+
+
+
+// para la imagen (botones de cambio)
+
+@mixin btn_punto($tamaño:10px){
+    width: $tamaño !important;
+    height:$tamaño !important;
+    display: block;
+    border-radius: 0  !important;
+    border-bottom:3px solid #000 ;
+    border-left:3px solid #000 ;
+    cursor: pointer;
+}
